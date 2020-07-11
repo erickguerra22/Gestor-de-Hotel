@@ -1,0 +1,562 @@
+{
+	"info": {
+		"_postman_id": "23464c55-f9d2-49e4-9b45-0ea220bccb0e",
+		"name": "Gestor de Hotel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hotel",
+			"item": [
+				{
+					"name": "login",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "hotelCode",
+									"value": "943433",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "newhorizons123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3900/hotel/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"hotel",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerHotel",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTU5ZDNkYTEyOTczMzEwNDQ3NGFjNGEiLCJ1c2VybmFtZSI6ImVndWVycmEiLCJlbWFpbCI6ImVndWVycmFAZ21haWwuY29tIiwibmFtZSI6IkVyaWNrIiwibGFzdE5hbWUiOiJHdWVycmEiLCJwaG9uZSI6IjU0MDYxNjA1IiwibmF0aW9uYWxpdHkiOiJndWF0ZW1hbHRlY28iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE1OTQ0OTQzNjIsImV4cCI6MTU5NDQ5NTI2Mn0.L0FaSDDZMLTfVTdBPf7s4xIamOLp0kPXDJ3OzaazS4Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "losvecinos@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Los Vecinos",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "84569712",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "Guatemala, Guatemala",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "losvecinos123",
+									"type": "text"
+								},
+								{
+									"key": "score",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "startDate",
+									"value": "2020-03-15",
+									"type": "text"
+								},
+								{
+									"key": "endDate",
+									"value": "2020-05-05",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3900/hotel/registerHotel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"hotel",
+								"registerHotel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editHotel",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTU5ZDFjYzQ4NGNhMjJlZjAwNjVmMzEiLCJlbWFpbCI6Im5ld2hvcml6b25zQGdtYWlsLmNvbSIsIm5hbWUiOiJOZXcgSG9yaXpvbnMiLCJwaG9uZSI6IjQ1Njg5NTI2IiwibG9jYXRpb24iOiJRdWV0emFsdGVuYW5nbywgR3VhdGVtYWxhIiwiaG90ZWxDb2RlIjoiOTQzNDMzIiwiaWF0IjoxNTgyOTQ0NzMyLCJleHAiOjE1ODI5NDU2MzJ9.gz44JIB2TeSrnXoGNQn5Ub9z3SMMNwhgfXOK7sEuYlg\"",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Nuevos Horizontes",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3900/hotel/editHotel/5e59d1cc484ca22ef0065f31",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"hotel",
+								"editHotel",
+								"5e59d1cc484ca22ef0065f31"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteHotel",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTU5Y2U3ZjUyMGYyZTE4YzQ3OTBkNzAiLCJlbWFpbCI6Im5ld2hvcml6b25zQGdtYWlsLmNvbSIsIm5hbWUiOiJOdWV2b3MgSG9yaXpvbnRlcyIsInBob25lIjoiNDU2ODk1MjYiLCJsb2NhdGlvbiI6IlF1ZXR6YWx0ZW5hbmdvLCBHdWF0ZW1hbGEiLCJob3RlbENvZGUiOiI3MTUwMTQiLCJpYXQiOjE1ODI5NDQ2OTMsImV4cCI6MTU4Mjk0NTU5M30.f70S9B85BYaUCaFC1PjiEbCuUVAMXUJSw2NmDjMRvO4\"",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3900/hotel/deleteHotel/5e59ce7f520f2e18c4790d70",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"hotel",
+								"deleteHotel",
+								"5e59ce7f520f2e18c4790d70"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "login",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "eguerra",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3900/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listUsers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTU5ZDNkYTEyOTczMzEwNDQ3NGFjNGEiLCJ1c2VybmFtZSI6ImVndWVycmEiLCJlbWFpbCI6ImVndWVycmFAZ21haWwuY29tIiwibmFtZSI6IkVyaWNrIiwibGFzdE5hbWUiOiJHdWVycmEiLCJwaG9uZSI6IjU0MDYxNjA1IiwibmF0aW9uYWxpdHkiOiJndWF0ZW1hbHRlY28iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE1OTQ0OTQzNjIsImV4cCI6MTU5NDQ5NTI2Mn0.L0FaSDDZMLTfVTdBPf7s4xIamOLp0kPXDJ3OzaazS4Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3900/user/listUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"user",
+								"listUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchHotel",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTU5ZDNkYTEyOTczMzEwNDQ3NGFjNGEiLCJ1c2VybmFtZSI6ImVndWVycmEiLCJlbWFpbCI6ImVndWVycmFAZ21haWwuY29tIiwibmFtZSI6IkVyaWNrIiwibGFzdE5hbWUiOiJHdWVycmEiLCJwaG9uZSI6IjU0MDYxNjA1IiwibmF0aW9uYWxpdHkiOiJndWF0ZW1hbHRlY28iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE1OTQ0OTQzNjIsImV4cCI6MTU5NDQ5NTI2Mn0.L0FaSDDZMLTfVTdBPf7s4xIamOLp0kPXDJ3OzaazS4Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "startDate",
+									"value": "2020-03-16",
+									"type": "text"
+								},
+								{
+									"key": "endDate",
+									"value": "2020-03-27",
+									"type": "text"
+								},
+								{
+									"key": "score",
+									"value": "10",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "orden",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3900/user/searchHotel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"user",
+								"searchHotel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerAdmin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "eguerra",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "eguerra@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Erick",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "Guerra",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "54061605",
+									"type": "text"
+								},
+								{
+									"key": "nationality",
+									"value": "guatemalteco",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3900/user/registerAdmin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"user",
+								"registerAdmin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "gjuarez",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "gjuarez@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "gaby123",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Gabriela",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "Juarez",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "42458967",
+									"type": "text"
+								},
+								{
+									"key": "nationality",
+									"value": "guatemalteco",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3900/user/registerUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"user",
+								"registerUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTU5ZDQxYTJhY2ZhODJjZTQ1NTkwNTciLCJ1c2VybmFtZSI6ImR0ZXJjZXJvIiwiZW1haWwiOiJkdGVyY2Vyb0BnbWFpbC5jb20iLCJuYW1lIjoiRGVuaXNzZSIsImxhc3ROYW1lIjoiVGVyY2VybyIsInBob25lIjoiNTQ4NjkzMTIiLCJuYXRpb25hbGl0eSI6Imd1YXRlbWFsdGVjbyIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNTgyOTQ1MzEzLCJleHAiOjE1ODI5NDYyMTN9.DA3Ic6knOL-5Tp2P3MSa-aYl9T15YA73ZN9FldayD7A\"",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "lastname",
+									"value": "Muñoz",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3900/user/editUser/5e59d41a2acfa82ce4559057",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"user",
+								"editUser",
+								"5e59d41a2acfa82ce4559057"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZTU5ZDQxYTJhY2ZhODJjZTQ1NTkwNTciLCJ1c2VybmFtZSI6ImR0ZXJjZXJvIiwiZW1haWwiOiJkdGVyY2Vyb0BnbWFpbC5jb20iLCJuYW1lIjoiRGVuaXNzZSIsImxhc3ROYW1lIjoiVGVyY2VybyIsInBob25lIjoiNTQ4NjkzMTIiLCJuYXRpb25hbGl0eSI6Imd1YXRlbWFsdGVjbyIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNTgyOTQ1MzEzLCJleHAiOjE1ODI5NDYyMTN9.DA3Ic6knOL-5Tp2P3MSa-aYl9T15YA73ZN9FldayD7A\"",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3900/user/deleteUser/5e59d4792acfa82ce4559058",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"user",
+								"deleteUser",
+								"5e59d4792acfa82ce4559058"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
